@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="overlay">
+        <div class="spinner"></div>
+    </div>
+    <!-- Status da conexão Mqtt-->
+    <div id="mqtt-status" class="status-reconectando">MQTT: Reconectando</div>
+
+    <div class="container">
+        <div class="semaforo">
+            <div class="led" id="vermelho"></div>
+            <div class="led" id="amarelo"></div>
+            <div class="led" id="verde"></div>
+        </div>
+        <div class="controle">
+            <button class="action-btn btnvermelho" onclick="enviaControle('vermelho')">Vermelho</button>
+            <button class="action-btn btnamarelo" onclick="enviaControle('amarelo')">Amarelo</button>
+            <button class="action-btn btnverde" onclick="enviaControle('verde')">Verde</button>
+            <button class="action-btn automatico" onclick="enviaControle('automatico')">Automático</button>
+            <button class="action-btn desligado" onclick="enviaControle('desligar')">Desligar</button>
+            <button class="action-btn" onclick="enviaControle('intermitente')">Intermitente</button>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
